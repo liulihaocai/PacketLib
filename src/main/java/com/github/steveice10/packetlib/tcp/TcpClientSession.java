@@ -71,7 +71,7 @@ public class TcpClientSession extends TcpSession {
                     getPacketProtocol().newClientSession(client, TcpClientSession.this);
 
                     channel.config().setOption(ChannelOption.IP_TOS, 0x18);
-                    channel.config().setOption(ChannelOption.TCP_NODELAY, false);
+                    channel.config().setOption(ChannelOption.TCP_NODELAY, true);
 
                     ChannelPipeline pipeline = channel.pipeline();
 

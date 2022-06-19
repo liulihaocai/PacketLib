@@ -74,7 +74,7 @@ public class TcpConnectionListener implements ConnectionListener {
                 session.getPacketProtocol().newServerSession(server, session);
 
                 channel.config().setOption(ChannelOption.IP_TOS, 0x18);
-                channel.config().setOption(ChannelOption.TCP_NODELAY, false);
+                channel.config().setOption(ChannelOption.TCP_NODELAY, true);
 
                 ChannelPipeline pipeline = channel.pipeline();
 
